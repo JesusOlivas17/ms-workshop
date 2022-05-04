@@ -15,10 +15,15 @@ import java.io.Serializable;
 @NoArgsConstructor
 public class Concepto implements Serializable {
 
+    @Id
+    @GeneratedValue(generator = "error_evidencia_id_seq")
+    @SequenceGenerator(name = "error_evidencia_id_seq", sequenceName = "error_evidencia_id_seq", allocationSize = 1)
     private Long id;
-
+    
+    @Column @NotNull
     private String nombre;
-
+    
+    @Column @NotNull
     private boolean activo;
 
 }

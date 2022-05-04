@@ -21,8 +21,9 @@ public class ConceptoReservacion implements Serializable {
     @EmbeddedId
     private ConceptoReservacionId id;
 
+    @Column @NotNull
     private Integer cantidad;
-
+    @Column @NotNull
     private Double importe;
 
 }
